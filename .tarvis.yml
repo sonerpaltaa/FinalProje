@@ -1,0 +1,5 @@
+language : java
+sudo : false
+script : "mvn -f proje/pom.xml clean install cobertura:cobertura"
+after_success:
+   - bash <(curl -s https://codecov.io/bash)
